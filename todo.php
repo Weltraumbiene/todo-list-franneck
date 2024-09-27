@@ -1,26 +1,20 @@
 <?php
-header('Content-Type: application/json');
 
-// Datei, in der die TODOs gespeichert werden
-$file = 'todo.json';
+header("Content-Type: application/json");
 
-// Existierende TODOs laden
-if (file_exists($file)) {
-    $json_data = file_get_contents($file);
-    $todos = json_decode($json_data, true);
-} else {
-    $todos = [];
+switch ($_SERVER["REQUEST_METHOD"]) {
+    case "GET":
+        // Get TODO (Read)
+        break;
+    case "POST":
+        // ADD Todo (CREATE)
+        break;
+    case "PUT":
+        //Change Todo (UPDATE)
+        break;
+        case "DELETE":
+            //REMOVE TODO DELETE
+        break;
+    
 }
-
-// Neuen Eintrag hinzufügen
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $input = json_decode(file_get_contents('php://input'), true);
-    $todos[] = $input['todo'];
-    file_put_contents($file, json_encode($todos));
-    echo json_encode(['status' => 'success']);
-    exit;
-}
-
-// TODOs zurückgeben
-echo json_encode($todos);
 ?>
