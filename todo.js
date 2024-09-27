@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-const apiUrl = "todo.php";
+    // Define the URL to our PHP API.
+    const apiUrl = "todo-api.php";
 
 });
