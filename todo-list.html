@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
+<!-- Der Dokumenttyp wird als HTML5-Dokument definiert. Das "lang"-Attribut gibt die Sprache des Dokuments an (Deutsch in diesem Fall). -->
 <head>
     <meta charset="UTF-8">
+    <!-- Legt das Zeichencodierungsformat fest (UTF-8), um sicherzustellen, dass Sonderzeichen korrekt dargestellt werden. -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="todo-list.css">
-    <title>Todo-Liste</title>
+    <!-- Stellt sicher, dass die Seite auf allen Geräten (insbesondere Mobilgeräten) korrekt skaliert wird, indem die Breite der Seite auf die Bildschirmbreite des Geräts gesetzt wird. -->
+
+    <title>TODO-Liste</title>
+    <!-- Definiert den Titel der Webseite, der im Browser-Tab angezeigt wird. -->
 </head>
 <body>
-    <h1>Todo-Liste</h1>
-    <ul id="todo-list">
-        <!-- Unordered list to dynamically add todo list items. -->
-    </ul>
+    <!-- Der Hauptinhalt der Webseite befindet sich innerhalb des <body>-Tags. -->
+    
+    <h1>Meine TODO-Liste</h1>
+    <!-- Eine Hauptüberschrift (Level 1) für den Titel der Seite. -->
+
     <form id="todo-form">
+        <!-- Ein HTML-Formular, mit der ID "todo-form", das zum Hinzufügen neuer TODO-Elemente dient. -->
+        
         <input type="text" id="todo-input" placeholder="Neue Aufgabe hinzufügen">
+        <!-- Ein Eingabefeld, in das der Benutzer seine neue Aufgabe einträgt. Das Attribut "placeholder" zeigt den Text an, bevor der Benutzer etwas eingibt. -->
+
         <button type="submit">Hinzufügen</button>
+        <!-- Ein Button, um das Formular abzusenden und das neue TODO hinzuzufügen. -->
     </form>
-    <script src="todo-list.js"></script>
+
+    <ul id="todo-list">
+        <!-- Eine ungeordnete Liste (<ul>), die als Container für die TODO-Elemente dient, die dynamisch hinzugefügt werden. 
+        Der Inhalt wird durch das verknüpfte JavaScript-Skript (todo.js) gesteuert. -->
+    </ul>
+
+    <script src="todo.js"></script>
+    <!-- Verknüpft das externe JavaScript (todo.js), das für die Interaktivität der Seite verantwortlich ist, wie das Abrufen und Hinzufügen von TODO-Elementen. -->
 </body>
 </html>
